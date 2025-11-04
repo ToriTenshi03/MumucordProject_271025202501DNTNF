@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkgfumu3sq0rb"]
+
+[ext_resource type="Script" uid="uid://jxrh12q4scxc" path="res://entities/actors/eleonorahikari/scripts/eleonara_hikari.gd" id="1_0rbjq"]
+[ext_resource type="Texture2D" uid="uid://d4d5mh1sahal6" path="res://assets/images/sprites/elonaraHikari.png" id="1_vbf6p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rbjq"]
+height = 38.0
+
+[node name="EleonaraHikari" type="CharacterBody2D"]
+script = ExtResource("1_0rbjq")
+entity_name = "Eleonara Hikari"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+texture = ExtResource("1_vbf6p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_0rbjq")

@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://bpelsrdvtvsbs"]
+[gd_scene load_steps=3 format=3 uid="uid://bpelsrdvtvsbs"]
+
+[ext_resource type="PackedScene" uid="uid://bkgfumu3sq0rb" path="res://entities/actors/eleonorahikari/eleonara_hikari.tscn" id="1_6ygkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_givvu"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_givvu")
+
+[node name="EleonaraHikari" parent="." instance=ExtResource("1_6ygkl")]
+position = Vector2(-1, -47)
+
+[node name="Camera2D" type="Camera2D" parent="."]
